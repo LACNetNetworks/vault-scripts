@@ -1,7 +1,0 @@
-/** @type import('hardhat/config').HardhatUserConfig */
-module.exports = {
-  solidity: "0.8.28",
-  paths: {
-    sources: "./src/gas-model", // ou qualquer outro caminho
-  },
-};
