@@ -46,9 +46,14 @@ npm install
 Create a `.env` file with the following variables:
 
 ```env
-RPC_URL=http://<your-lacchain-node>:8545
-PRIVATE_KEY=0x...
-CONTRACT_ADDRESS=0x...
+RPC_NODE=http://<your-lacchain-ip-node>
+PRIVATE_KEY_OWNER=...
+PRIVATE_KEY_MEMBER=...
+NODE_ADDRESS=0x...
+OWNER_ADDRESS=0x..
+MEMBER_ADDRESS=0x...
+VAULT_CONTRACT=0x...
+ERC20_CONTRACT=0x...
 ```
 
 ## 🧪 Available Scripts
@@ -83,3 +88,12 @@ node script/gas-model/memberLockToken.js
 ```
 
 All scripts use the provider and signer configured in `script/utils/provider.js`.
+
+## 🔐 Security
+
+⚠️ Never share your private key. Always use environment variables to protect it.
+
+## ⚠️ Important
+
+To successfully use the `ownerBurnToken.js` script, the ERC20 token contract **must implement** the `ERC20Burnable` interface (e.g., extending `@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol`).  
+Otherwise, the burn operation will fail.
