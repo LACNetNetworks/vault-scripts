@@ -2,6 +2,7 @@ require("dotenv").config();
 const { ethers, getAddress } = require("ethers");
 const { getSigner } = require("../utils/provider");
 const contractAbi = require("../../artifacts/src/gas-model/VaultIn.sol/VaultIn.json");
+const erc20Abi = require("../../artifacts/src/gas-model/ERC20Mock.sol/ERC20Mock.json");
 
 async function main() {
   const signer = getSigner(process.env.PRIVATE_KEY_OWNER);
