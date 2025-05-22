@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "VaultBurnable",
+  "sourceName": "src/gas-model/VaultBurnable.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "BurnFailed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InsufficientBalance",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "TokenBurned",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
